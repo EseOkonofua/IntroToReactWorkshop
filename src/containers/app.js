@@ -4,9 +4,9 @@ import PokemonList from '../pokemonList';
 
 function PokemonPicker(props) {
     return (
-        <select onChange={props.handleChange} value={props.choice}>
+        <select className='pokemonPicker' id={props.id} onChange={props.handleChange} value={props.choice}>
             {
-                props.pokemonList.map ( data =>{ 
+                props.pokemonList.map ( data => { 
                     return <option key={data.id} value={data.id}>{data.name}</option>;
                 })
             }                        
@@ -14,51 +14,79 @@ function PokemonPicker(props) {
     );
 }
 
-function CardHolder(props) {
-    return <div></div>;
+function PokemonCard(props) {
+
+    if (props.pokemon) {
+        var myStyle = {
+            backgroundImage: `url(${props.pokemon.sprites.front_default}) `,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '45%'
+        };
+
+        return (
+            <div  className='pokemonCard'>
+                <h1>{props.pokemon.name}</h1>
+                <div style={myStyle} className='pokemonImage'></div>
+                <div className='pokemonTypes'>
+                    {props.pokemon.types.map ((item, index) => <label key={index}>{item.type.name}</label>)}
+                </div>
+                <div className='pokemonStats'></div>
+            </div>
+        );
+    }
+    else 
+        return (
+        <div className='pokemonCard--Empty'>
+            <img src="https://img.icons8.com/color/48/000000/pokeball-2.png"></img>
+        </div>
+        );
 }
 
 export default class App extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            PokemonList,
             PokemonOne: 1,
             PokemonTwo: 2,
             PokemonOneData: null,
             PokemonTwoData: null
         };
 
+        this.PokemonList = PokemonList;
         this.pokeAPI = {
             host: "https://pokeapi.co/api/v2/"
-        }
+        };
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    componentWillMount(){
+    componentWillMount() {
         this.loadPokemonOneData();
         this.loadPokemonTwoData();
     }
 
     render() {
         return (
-            <div className="app">
-                <section className='pokemon_pickers'>
-                    <PokemonPicker handleChange={this.handleChangeOne.bind(this)} pokemonList={this.state.PokemonList} choice={this.state.PokemonOne} />
-                    <PokemonPicker handleChange={this.handleChangeTwo.bind(this)} pokemonList={this.state.PokemonList} choice={this.state.PokemonTwo} />
+            <div className='container'>
+                <section className='cardSection'>
+                    <PokemonPicker id='pokemonOne' handleChange={this.handleChange} pokemonList={this.PokemonList} choice={this.state.PokemonOne} />
+                    <PokemonCard pokemon={this.state.PokemonOneData} />
                 </section>
-                <section className='card_holders'>
-                    <CardHolder />
+                <section className='cardSection'>
+                    <PokemonPicker id='pokemonTwo' handleChange={this.handleChange} pokemonList={this.PokemonList} choice={this.state.PokemonTwo} />
+                    <PokemonCard pokemon={this.state.PokemonTwoData} />
                 </section>
             </div>
         );
     }
 
-    handleChangeOne(event) {
-        this.setState({ PokemonOne: event.target.value }, () => this.loadCardOne());
-    }
-
-    handleChangeTwo(event) {
-        this.setState({ PokemonTwo: event.target.value }, () => this.loadCardTwo());
+    handleChange(event) {
+        if(event.target.id === 'pokemonOne')
+            this.setState({ PokemonOne: event.target.value }, () => this.loadPokemonOneData());
+        if(event.target.id === 'pokemonTwo')
+            this.setState({ PokemonTwo: event.target.value }, () => this.loadPokemonTwoData());
     }
 
     loadPokemonOneData() {

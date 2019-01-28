@@ -1,0 +1,64 @@
+* {
+    text-transform: capitalize;
+}
+
+body, html {
+    margin:0;
+    background-color: black;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardSection {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.cardSection:first-of-type {
+    margin-right: 20px;
+}
+
+.pokemonCard {
+    border: 1px solid #ccc;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 50vh;
+    width: 100%;
+    min-width: 300px;
+    min-height: 400px;
+    padding: 10px;
+}
+
+.pokemonPickers {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pokemonPicker {
+    margin-right: 10px;
+}
+
+.pokemonImage {
+    border: 1px solid #ccc;
+}
+
+.pokemonTypes {
+
+}
