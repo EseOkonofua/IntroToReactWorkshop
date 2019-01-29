@@ -5,7 +5,8 @@
 body, html {
     margin:0;
     background-color: black;
-    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-family: "Istok Web"; 
+    font-size: 15px;
 }
 
 .container {
@@ -35,7 +36,7 @@ body, html {
 }
 
 .pokemonCard {
-    border: 1px solid #ccc;
+    border: 5px solid khaki;
     display: inline-block;
     box-sizing: border-box;
     height: 50vh;
@@ -43,22 +44,69 @@ body, html {
     min-width: 300px;
     min-height: 400px;
     padding: 10px;
-}
-
-.pokemonPickers {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    background: rgb(125,125,125);
+    background: radial-gradient(circle, rgba(125,125,125,1) 0%, rgba(246,246,246,1) 100%);
 }
 
 .pokemonPicker {
-    margin-right: 10px;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 5px;
+}
+
+.pokemonImageContainer {
+    width: 90%;
+    margin: 0px auto;
+    height: 45%;
+    text-align: center;
+    border: 7px solid khaki;
+    background: rgb(125,125,125);
+    background: radial-gradient(circle, rgba(125,125,125,1) 0%, rgba(0,0,0,1) 100%);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
 }
 
 .pokemonImage {
-    border: 1px solid #ccc;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.pokemonName {
+    font-size: 2.5em;
+    margin: 10px 0px;
 }
 
 .pokemonTypes {
+    margin-top: 5px;
+    padding: 10px 0px;
+}
 
+.stat {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.statName {
+    margin: 10px 0px;
+}
+
+.statNumber {
+    font-size: 1.5em;
+}
+
+.arrows {
+    position: relative;
+    animation: hover 0.4s linear infinite alternate;
+}
+
+@keyframes hover{
+    from {
+        bottom: 3px;
+    }
+
+    to {
+        bottom: 0px;
+    }
 }
