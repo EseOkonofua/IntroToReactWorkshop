@@ -12,7 +12,7 @@ export default {
     "psychic": "pink",
     "bug": "lightgreen",
     "rock": "coral",
-    "ghost": "darkpurple",
+    "ghost": "slategrey",
     "dragon": "mediumslateblue",
     "fairy": "darkseagreen",
     "steel": "lightsteelblue"
