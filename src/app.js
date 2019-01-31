@@ -33,32 +33,34 @@ function PokemonCard(props) {
                 </div>
                 <hr/>
                 <div className='pokemonStats'>
-                    {props.pokemon.stats.map( (item, index ) => {
-                        var arrow = null;
-                        var arrowStyle = null;
-                        var color = null;
-                        if(comparisonArray) {
-                            if(comparisonArray[index] > 0) {
-                                color = 'green';
-                                arrow = arrowUp;
+                    {
+                        props.pokemon.stats.map( (item, index ) => {
+                            var arrow = null;
+                            var arrowStyle = null;
+                            var color = null;
+                            if(comparisonArray) {
+                                if(comparisonArray[index] > 0) {
+                                    color = 'green';
+                                    arrow = arrowUp;
+                                }
+                                else if(comparisonArray[index] < 0) {
+                                    color = 'red';
+                                    arrow = arrowDown;
+                                }
+                                arrowStyle = { color };
                             }
-                            else if(comparisonArray[index] < 0) {
-                                color = 'red';
-                                arrow = arrowDown;
-                            }
-                            arrowStyle = { color };
-                        }
 
-                        return (
-                            <div className='stat' key={index}>
-                                <h3 className='statName'>{item.stat.name}</h3>
-                                <div style={arrowStyle} className='statNumber'>
-                                    <span>{item.base_stat}</span>
-                                    {arrow}
-                                </div>                            
-                            </div>
-                        )
-                    })}
+                            return (
+                                <div className='stat' key={index}>
+                                    <h3 className='statName'>{item.stat.name}</h3>
+                                    <div style={arrowStyle} className='statNumber'>
+                                        <span>{item.base_stat}</span>
+                                        {arrow}
+                                    </div>                            
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         );
