@@ -39,7 +39,6 @@ body, html {
     border: 5px solid khaki;
     display: inline-block;
     box-sizing: border-box;
-    height: 50vh;
     width: 100%;
     min-width: 300px;
     min-height: 400px;
@@ -57,7 +56,7 @@ body, html {
 }
 
 .pokeball {
-    height: 40%;
+    height: 10vh;
 }
 
 .pokemonPicker {
@@ -70,7 +69,7 @@ body, html {
 .pokemonImageContainer {
     width: 90%;
     margin: 0px auto;
-    height: 45%;
+    height: 25vh;
     text-align: center;
     border: 7px solid khaki;
     background: rgb(125,125,125);
@@ -104,6 +103,10 @@ body, html {
     border-radius: 5px;
     border: 1px solid white;
     color: white;
+}
+
+.pokemonStats {
+    margin-bottom: 10px;
 }
 
 .stat {

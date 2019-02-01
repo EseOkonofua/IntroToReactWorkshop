@@ -28,6 +28,9 @@ export default class App extends Component {
                 <section className='cardSection'>
                     <PokemonPicker id='pokemonOne' handleChange={this.handleChange} list={PokemonList} choice={1}></PokemonPicker>
                 </section>
+                <section className='cardSection'>
+                    <PokemonPicker id='pokemonTwo' handleChange={this.handleChange} list={PokemonList} choice={2} />
+                </section>
             </div>
         );
     }
