@@ -20,6 +20,8 @@ export default class App extends Component {
 
 /**
  *  Variables Can hold elements, components & jsx. They can then be accessed in JSX using the curly brackets {}:
+ *  JSX is react's "language" for dyanmic frontend generation. It is a mixture of HTML and javascript. Allowing developers
+ *  to use familiar HTML syntax but with the power of embedding javascript expressions within the html.
  */  
 // Example:
  var header = <h1>This is my Header</h1>;
@@ -52,7 +54,7 @@ class MyHeaderClass extends Component {
     }    
 
     render() {
-        return (<div>{props.title}</div>);
+        return (<div>{this.props.title}</div>);
     }
 }
 
