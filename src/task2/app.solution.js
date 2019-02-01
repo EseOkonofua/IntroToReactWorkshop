@@ -14,7 +14,9 @@ function PokemonPicker(props) {
         value={props.choice}>
             {
                 props.list.map ( (data, index) => { 
-                    return <option key={index} value={data.value}>{data.name}</option>;
+                    var name = data.name;   
+                    var value = data.value; 
+                    return <option key={index} value={value}>{name}</option>;
                 })
             }                        
         </select>

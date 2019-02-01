@@ -69,14 +69,14 @@ export default class App extends Component {
      */
     loadPokemonOneData() {
         this.getPokemon(this.state.PokemonOne).then( res => {
-            var data = res.data;
+            var data = res.data;   //Use me
             /** Enter code here */
         });
     }
 
     loadPokemonTwoData() {
         this.getPokemon(this.state.PokemonTwo).then( res => {
-            var data = res.data;
+            var data = res.data;   //Use me
             /** Enter code here */
         });
     }
@@ -86,7 +86,7 @@ export default class App extends Component {
     // Write a function that will set the state of our corresponding pokemon to the value in it's picker.
     // Pass a callback function to load the corresponding pokemon data after the state is set.
     handleChange(event) {
-        var myValue = event.target.value;
+        var myValue = event.target.value;   //Use me
         if(event.target.id === 'pokemonOne') {
             /** Enter code here */
         }
