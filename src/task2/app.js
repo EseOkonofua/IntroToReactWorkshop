@@ -9,12 +9,15 @@ import PokemonList from '../constants/pokemonList';
 function PokemonPicker(props) {
     return (
         <select className='pokemonPicker' 
+        //Fill out these sections with the props variable
         id={null/**Enter code here */} 
         onChange={null/**Enter code here */} 
         value={1/**Enter code here */}>
             {          
                 /** use the map function on the pokemon list to create option tags */
                 props.list.map ( (data, index) => { 
+                    var name = data.name;   //Use me
+                    var value = data.value  //Use me
                     return <option key={index} value={1/**Enter code here */}>{null/**Enter code here */}</option>
                 })
             }                        

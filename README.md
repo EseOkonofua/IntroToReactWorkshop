@@ -3,8 +3,9 @@
 This is an introduction to React. These tasks will walk you through creating a Pokemon Card Comparer App, while introducing you to the basics of React development.
 
 ### Requirements:
-install node.js & npm
+install node.js & npm:
 [Node.js Website](https://nodejs.org/en/)
+
 
 ### To get started run in command line:
 ```javascript

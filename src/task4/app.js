@@ -36,7 +36,7 @@ function PokemonCard(props) {
         var pokemonName = props.pokemon.name;                          // Use me
         var pokemonSpriteSource = props.pokemon.sprites.front_default; // Use me
         return (
-            <div  className='pokemonCard'>
+            <div className='pokemonCard'>
                 <h1 className='pokemonName'>{null/** Enter code here */}</h1>
                 <div className='pokemonImageContainer'>
                     <img className='pokemonImage' src={null/** Enter code here */}></img>
