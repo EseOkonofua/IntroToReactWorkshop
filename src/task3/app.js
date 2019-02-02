@@ -104,7 +104,8 @@ export default class App extends Component {
  * changes made to a state variable will affect what is being show in the UI.
  * In order to change the state of a component we must use setState function.
  * the first argument of the setState function is the object with the corresponding state varibles you'd like to update.
- * the second argument of the setState function is a callback function for after the state has updated, given that setState calls are not synchronous.
+ * the second argument of the setState function is a callback function for after the state has updated,
+ * given that setState calls are asynchronous.
 */
 // Example:
 class StateExample extends Component {

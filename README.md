@@ -16,6 +16,9 @@ npm run start
 #### index.js
 This is the entry file of the application. Import App from different locations to access different stages of Workshop. 
 ```javascript
-//import App from './app';
 import App from './task1/app';
+// import App from './task2/app';
+// import App from './task3/app';
+// import App from './task4/app';
+// import App from './app';
 ```

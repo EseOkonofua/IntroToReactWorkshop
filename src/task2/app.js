@@ -44,6 +44,7 @@ export default class App extends Component {
  */
 /**
  *  JSX can handle arrays of elements. We can embed multiple elements/components through an array.
+ *  Elements in the array are placed in the page on the same level.
  *  Any elements or components in the array must be given a unique key property.
  */ 
  // Example:
@@ -53,7 +54,8 @@ function ArrayExmaple(props) {
 }
 
  /**
-  * In react development a common way of creating dynamic elements is to use the array map function. 
+  *  In react development a common way of creating dynamic elements is to use the array map function. 
+  *  Map a data array to an array of elements or components.
   */
  // Example:
 var names = ["hannah", "angela", "stacy"];
